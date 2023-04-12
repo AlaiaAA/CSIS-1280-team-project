@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./statics/css/proj_more.css" rel="stylesheet" />
+    <script src="form_event.js"></script>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="contactUs">
+            <div class="left">
+                <div class="contact">
+                    <form>
+                        <div class="fname formItem">
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="Please enter your first name."
+                                required><br>
+                        </div>
+                        <div class="lname formItem">
+                            <label for="lname">Last name:&nbsp;</label>
+                            <input type="text" id="lname" name="lname" placeholder="Please enter your last name."
+                                required>
+                        </div>
+                        <div class="email formItem">
+                            <label
+                                for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+                            <input type="email" id="email" name="email" placeholder="Please enter your email." required>
+                        </div>
+                        <div class="mobile formItem">
+                            <label for="mobile">Mobile No.:</label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number."
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </div>
+                        <div class="small"> <small>Format: 123-456-7890</small></div>
+                        <div class="issue formItem">
+                            <label for="issue">Tell us your story or issue:</label>
+                            <textarea id="issue" name="issue" rows="5" cols="15" required maxlength="300"></textarea>
+                            <span style="text-align: end;"><span class="wordCnt">300</span> letters
+                                left</span>
+                        </div>
+                        <div class="date formItem">
+                            <label for="date">Special Event:</label>
+                            <select name="date" id="date">
+                                <option value="Anniversary">Anniversary</option>
+                                <option value="Birthday">Birthday</option>
+                                <option value="Wedding">Wedding</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Submit" onclick="return submissionHandler()" />
+                        </div>
+                    </form>
+                </div>
+                <div class="thanks" style="display: none;">
+                    <h1>Awesome <span><i id="inputName"></i></span>, <br />thanks for contacting us, <br />we will reach
+                        you within 3-5 days.</h1>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="info">
+            <h3>Photography-an Art </h3>
+            <div>
+                <div style="color: lightgray;">info@photographyanart.com</div><br />
+                <div style="color: lightgray;">104 Edward Ave. ,<br /> MI<br /> 876043</div>
+            </div>
+        </div>
+        <div>
+            <h3>Menu</h3>
+            <div style="color: lightgray;">
+                <div class="link"> <a href="home.html">Home</a></div>
+                <div class="link"><a href="services.html">Services</a></div>
+                <div class="link"><a href="contact.html">Contact Information</a></div>
+                <div class="link"><a href="aboutus.html">About Us</a></div>
+            </div>
+        </div>
+        <div>
+            <h3>Social Media</h3>
+            <div style="color: lightgray;">
+                <div class="link">
+                    <div class="icon" style="background-image: url('statics/icons/tw.svg');"></div><a
+                        href="https://twitter.com/">Twitter</a>
+                </div>
+                <div class="link">
+                    <div class="icon" style="background-image: url('statics/icons/ins.svg');"></div><a
+                        href="https://www.instagram.com/">Instagram</a>
+                </div>
+                <div class="link">
+                    <div class="icon" style="background-image: url('statics/icons/fb.svg');"></div><a
+                        href="https://www.facebook.com/">Facebook</a>
+                </div>
+                <div class="link">
+                    <div class="icon" style="background-image: url('statics/icons/tt.svg');"></div><a
+                        href="https://www.tiktok.com/en/">Tiktok</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Instagram Feed</h3>
+            <div class="feed">
+                <div class="feedItem">
+                    <img src="statics/images/photo2.jpg" alt="">
+                </div>
+                <div class="feedItem">
+                    <img src="statics/images/photo3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
