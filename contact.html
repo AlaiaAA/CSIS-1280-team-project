@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Information</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="main">
         <div class="contactUs">
             <div class="left">
@@ -18,28 +28,26 @@
                     <form>
                         <div class="fname formItem">
                             <label for="fname">First name:</label>
-                            <input type="text" id="fname" name="fname" placeholder="Please enter your first name."
-                                required><br>
+                            <input type="text" id="fname" name="fname"
+                                placeholder="Please enter your first name." /><br>
                         </div>
                         <div class="lname formItem">
                             <label for="lname">Last name:&nbsp;</label>
-                            <input type="text" id="lname" name="lname" placeholder="Please enter your last name."
-                                required>
+                            <input type="text" id="lname" name="lname" placeholder="Please enter your last name." />
                         </div>
                         <div class="email formItem">
                             <label
                                 for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
-                            <input type="email" id="email" name="email" placeholder="Please enter your email." required>
+                            <input type="email" id="email" name="email" placeholder="Please enter your email." />
                         </div>
                         <div class="mobile formItem">
                             <label for="mobile">Mobile No.:</label>
-                            <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number."
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Please enter your phone number." />
                         </div>
                         <div class="small"> <small>Format: 123-456-7890</small></div>
                         <div class="issue formItem">
                             <label for="issue">Tell us your story or issue:</label>
-                            <textarea id="issue" name="issue" rows="5" cols="15" required maxlength="300"></textarea>
+                            <textarea id="issue" name="issue" rows="5" cols="15" maxlength="300"></textarea>
                             <span style="text-align: end;"><span class="wordCnt">300</span> letters
                                 left</span>
                         </div>
@@ -53,7 +61,7 @@
                             </select>
                         </div>
                         <div class="submit">
-                            <input type="submit" value="Submit" onclick="return submissionHandler()" />
+                            <input id="submit" type="button" value="Submit" onclick="validateData()" />
                         </div>
                     </form>
                 </div>
@@ -69,7 +77,8 @@
         <div class="info">
             <h3>Photography-an Art </h3>
             <div>
-                <div style="color: lightgray;">info@photographyanart.com</div><br />
+                <div style="color: lightgray;"><a style='color: white; text-decoration: none;'
+                        href="mailto:photographyanart@example.com">info@photographyanart.com</a></div><br />
                 <div style="color: lightgray;">104 Edward Ave. ,<br /> MI<br /> 876043</div>
             </div>
         </div>
@@ -78,7 +87,7 @@
             <div style="color: lightgray;">
                 <div class="link"> <a href="home.html">Home</a></div>
                 <div class="link"><a href="services.html">Services</a></div>
-                <div class="link"><a href="contact.html">Contact Information</a></div>
+                <div class="link"><a href="contact.html">Contact Info</a></div>
                 <div class="link"><a href="aboutus.html">About Us</a></div>
             </div>
         </div>
@@ -115,6 +124,15 @@
             </div>
         </div>
     </footer>
+    <div id="overlay">
+        <div class="popup">
+            <p class="popup_title" style="color: red; font-weight: bolder;">Warning</p>
+            <p class="popup_content" style="color: red;">Please enter valid First name.</p>
+            <div class="popup_btn">
+                <button class="confirmBtn" onclick="hidePopup()">OK</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
