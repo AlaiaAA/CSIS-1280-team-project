@@ -17,23 +17,25 @@ html {
 }
 
 body {
-    width: 44%;
-    height: 10%;
-    margin-left: 9vw;
     position: relative;
-    background-color: white;
-    border-left: 12px solid gray;
-    border-right: 12px solid gray;
+    background-image: url('../images/background.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: rgb(12, 12, 12);
 }
 
 
 body>header nav {
     display: block;
-    text-align: right;
+    text-align: left;
     width: 100%;
     height: 5vh;
-    background-color: rgba(31, 61, 31, 0.9);
+    background-color: rgba(10, 10, 10, 0.9);
     border-right: 2px solid #0084bf;
+    font-size: 12px;
 }
 
 body>header>nav ul li {
@@ -73,28 +75,23 @@ article {
 }
 
 article header img {
-    display: block;
-    width: 100%;
+    display: none;
 
 }
 
 article p {
+    display: block;
+    background-color: rgba(131, 261, 31, 0.3);
     margin-left: 20%;
-    margin-right: 20%;
-    margin-top: -29%;
     margin-bottom: 30%;
     width: 60%;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-    font-size: 0.9em;
+    font-size: 1em;
+    padding: 5px;
 }
 
 article address {
-    margin: 40% 0% 0% 40%;
-    font-style: normal;
-    font-family: "Arial, Helvetica,sans-serif";
-    padding-bottom: 35%;
-    font-size: 0.1%;
-
+    display: none;
 }
 
 aside {
@@ -103,29 +100,30 @@ aside {
 
 
 body>h1 {
-    font-size: 1.7em;
+    font-size: 1em;
     font-family: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 5px;
 }
 
 body>h2 {
-    font-size: 1.1em;
+    font-size: .8em;
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-left: 15px;
     padding-bottom: 15px;
 }
 
 body>p {
-    font-size: 0.9em;
+    font-size: 0.7em;
     font-family: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-left: 15px;
 }
 
 body>img {
-    width: 80%;
-    height: 10%;
+    display: none;
 }
-
+video {
+    display: none;
+}
 footer {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
     text-align: center;
@@ -133,7 +131,8 @@ footer {
     border-top: 2px solid yellowgreen;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    color: white;
+    font-size: .8em;
 }
 
 
@@ -147,12 +146,6 @@ devices.
 
 @media only screen and (min-width: 501px) {
 
-    body {
-        min-height: 170%;
-        min-width: 80%;
-        margin-top: inherit;
-    }
-
     body>header nav ul {
         position: top;
         top: 1.5px;
@@ -160,21 +153,19 @@ devices.
     }
 
     article {
-        margin-left: 250px;
+        margin-left: 35vw;
+        margin-right: 15vw;
     }
 
     article p {
-        font-size: 1.1em;
+        width: 100%;
+        font-size: 1em;
         float: left;
     }
 
 
     article header img {
-        float: left;
-        width: 80%;
-        height: 45%;
-        margin-top: -40%;
-        display: block;
+       display: none;
     }
 
 
@@ -183,7 +174,7 @@ devices.
         float: left;
         width: 35%;
         background-color: #efefef;
-        margin-top: 0px;
+        margin-top: 20px;
     }
 
 
@@ -196,10 +187,7 @@ devices.
     }
 
     aside img {
-        float: none;
-        font-size: 0px;
-        width: 70%;
-        height: 421px;
+        display: none;
     }
 
     article address {
@@ -209,31 +197,27 @@ devices.
 
     body>h1 {
         margin-left: 20px;
-        font-size: 2.5em;
+        font-size: 1em;
         lighting-color: thistle;
     }
 
     body>h2 {
         margin-left: 30px;
-        font-size: 1.5em;
+        font-size: .8em;
     }
 
     body>p {
         margin-left: 30px;
-        font-size: 1em;
+        font-size: .7em;
     }
 
     body>img {
-        width: 10%;
-        float: right;
-        margin: 0px auto auto auto;
-        z-index: 1;
-        cursor: pointer;
+       display: none;
     }
 
     body>img:hover {
-        width: 350px;
-        height: 180px;
+        width: 280px;
+        height: 130px;
         z-index: 2;
         transition: width 2s;
     }
@@ -245,23 +229,27 @@ devices.
     }
 
     body>img:hover figcaption {
-        font-size: 1.2em;
+        font-size: 1.21em;
         transition: font-size 2s;
     }
 
-
-
     footer {
+        position: absolute;
+        bottom: 0;
         font-size: 1em;
+        width: 100%;
     }
 
     video {
         display: block;
         width: 75%;
         margin: inherit;
+        max-width: 500px;
+        margin-left: 10%;
     }
 }
- /* =============================================
+
+/* =============================================
 Desktop layout styles used by  devices
 769px and larger.
 =============================================
@@ -274,28 +262,42 @@ Desktop layout styles used by  devices
     }
 
     body {
-        width: 70%;
-        max-width: 1020px;
-        -moz-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px, rgba(31, 61, 31, 0.9) -20px 0px 25px;
-        -webkit-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px, rgba(31, 61, 31, 0.9) -20px 0px 25px;
-        box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px, rgba(31, 61, 31, 0.9) -20px 0px 25px;
+        position: relative;
+        background-image: url('../images/background.jpg');
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: rgb(12, 12, 12);
+    }
+    body>header nav {
+        display: block;
+        text-align: left;
+        width: 100%;
+        height: 5vh;
+        background-color: rgba(10, 10, 10, 0.9);
+        border-right: 2px solid #0084bf;
+        font-size: 20px;
     }
     article header img {
         float: left;
-        width: 75%;
+        width: 100%;
         height: 50%;
-        margin-top: -50%;
         margin-left: 25%;
         display: block;
+        margin-top: 10%;
     }
+
     article p {
         background-color: rgba(131, 261, 31, 0.3);
-        margin-left: 30%;
+        margin-left: 25%;
+        margin-top: -29%;
+        width: 90%;
     }
-    
+
     article address {
-        margin-top: 10%;
-        margin-left: 55%;
+        display: none;
     }
 
     footer {
@@ -303,5 +305,36 @@ Desktop layout styles used by  devices
         bottom: 0;
         font-size: 1em;
         width: 100%;
+    }
+    aside img {
+        display: block;
+        width: 15vw;
+        margin-left: 20%;
+    }
+    body > img {
+        display: block;
+        float: right;
+        width: 200px;
+        height: 100px;
+    }
+    
+    body>h1 {
+        margin-left: 20px;
+        font-size: 2em;
+        lighting-color: thistle;
+    }
+
+    body>h2 {
+        margin-left: 30px;
+        font-size: 1.2em;
+    }
+
+    body>p {
+        margin-left: 30px;
+        font-size: .9em;
+    }
+    video {
+        max-width: 500px;
+        margin-left: 40%;
     }
 }

@@ -32,6 +32,11 @@ body {
     height: 20%;
     background-color: black;
     color: white;
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 .contactUs {
@@ -106,6 +111,11 @@ body {
     opacity: 1;
 }
 
+input,
+input::placeholder {
+    font-weight: bold;
+}
+
 .issue {
     display: flex;
     flex-direction: column;
@@ -118,7 +128,7 @@ body {
     border: none;
 }
 
-.date select{
+.date select {
     width: 70%;
 }
 
@@ -154,9 +164,7 @@ a:hover {
     color: rgba(131, 261, 31);
 }
 
-footer {
-    font-size: .9vw;
-}
+
 .icon {
     height: 1em;
     width: 1em;
@@ -185,10 +193,6 @@ footer {
     transform: scale(1.2);
 }
 
-input::placeholder {
-   font-size: .5vw;
-}
-
 .thanks {
     text-align: center;
     width: 100%;
@@ -202,6 +206,7 @@ header {
     height: 7vh;
     background-color: rgba(31, 61, 31, 0.9);
 }
+
 header nav {
     padding-top: 0;
     display: absolute;
@@ -242,17 +247,48 @@ header>nav ul li a:active {
     header {
         display: none;
     }
+
     .right {
         display: none;
     }
+
     .left {
         width: 100%;
+    }
+
+    form {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    header {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    form {
+        font-size: 4em;
+    }
+
+    input::placeholder {
+        font-size: .8em;
     }
 }
 
 /* pop up */
 
-  #overlay {
+#overlay {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -260,11 +296,11 @@ header>nav ul li a:active {
     height: 100%;
     font-size: 16px;
     background-color: rgba(0, 0, 0, 0.5);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
     display: none;
-  }
+}
 
-  .popup {
+.popup {
     background-color: #ffffff;
     max-width: 400px;
     min-width: 200px;
@@ -273,21 +309,21 @@ header>nav ul li a:active {
     margin: 5% auto;
     text-align: center;
 
-  }
+}
 
-  .popup_title {
+.popup_title {
     height: 5vh;
     line-height: 5vh;
     border-bottom: solid 1px #cccccc;
-  }
+}
 
-  .popup_content {
+.popup_content {
     height: 10vh;
     line-height: 10vh;
     padding: 5% 7%;
-  }
+}
 
-  .popup_btn button {
+.popup_btn button {
     color: #778899;
     width: 40%;
     height: 40px;
@@ -297,4 +333,4 @@ header>nav ul li a:active {
     margin: 5px 10px;
     color: white;
     background-color: rgb(31, 61, 31);
-  }
+}
